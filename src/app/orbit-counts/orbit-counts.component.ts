@@ -27,5 +27,15 @@ export class OrbitCountsComponent implements OnInit {
 	return count;
  }
 
+ getTypes(){
+	let typesArray = [];
+	for (let i = 0; i < this.satellites.length; i++) {
+		if (!typesArray.includes(this.satellites[i].type)){
+			typesArray.push(this.satellites[i].type)
+		}
+	}
+	return typesArray;
+ }
+
 
 }
